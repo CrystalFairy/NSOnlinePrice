@@ -1,0 +1,11 @@
+step "Deploy a Release" {
+
+    action {
+        action_type = "Octopus.DeployRelease"
+        properties = {
+            Octopus.Action.DeployRelease.DeploymentCondition = "Always"
+            Octopus.Action.DeployRelease.ProjectId = "NSPriceOnliceAngular"
+        }
+        worker_pool_variable = ""
+    }
+}
